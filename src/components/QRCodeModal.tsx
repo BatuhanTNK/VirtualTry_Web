@@ -10,7 +10,7 @@ interface QRCodeModalProps {
 export function QRCodeModal({ product, onClose }: QRCodeModalProps) {
   if (!product) return null;
 
-  const deepLink = `virtual-tryon://ar-scene?model=${encodeURIComponent(product.modelUrl)}`;
+  const deepLink = `virtual-tryon://ar-scene?model=${encodeURIComponent(product.model_url)}`;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fade-in">

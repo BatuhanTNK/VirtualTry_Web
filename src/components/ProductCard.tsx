@@ -11,16 +11,11 @@ export function ProductCard({ product, onTryAR }: ProductCardProps) {
     <div className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-slate-700 hover:border-blue-600/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-600/20">
       <div className="relative aspect-square overflow-hidden bg-slate-900">
         <img
-          src={product.image}
+          src={product.image_url}
           alt={product.name}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-        {product.badge && (
-          <div className="absolute top-3 left-3 bg-amber-500/90 text-slate-900 text-xs font-semibold px-3 py-1 rounded-full">
-            {product.badge}
-          </div>
-        )}
       </div>
 
       <div className="p-6 space-y-4">
